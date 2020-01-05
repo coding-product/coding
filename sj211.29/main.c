@@ -1,0 +1,39 @@
+#include<stdio.h>
+main()
+{
+    int a,b,i,j,l,m,n,o=0,p,q,k,r;
+    printf("请输入数组的行和列");
+    scanf("%d,%d",&a,&b);
+    printf("请输入数组元素");
+    int d[a][b];
+    for(i=0;i<a;i++)
+        for(j=0;j<b;j++)
+    scanf("%d",&d[i][j]);
+    for(i=0;i<a;i++)
+    {
+        m=i;
+        for(j=0;j<b;j++)
+      {
+        l=d[i][0];
+        if(l>d[i][j])
+        {
+            l=d[i][j];
+            q=j;
+        }
+      }
+   for(r=0;r<a;r++)
+        if(l<d[r][q])
+        o++;
+    if(o==b-1)
+      {
+        p=1;
+        k=l;
+        break;
+      }
+       i=m;
+    }
+    if(p==1)
+    printf("这个函数的鞍点是%d",k);
+    else
+        printf("这个函数没有鞍点");
+}
